@@ -1,0 +1,14 @@
+{% extends 'template.html' %} {% block body %}
+<form action="/testing" method="POST">
+    Find <input type="text" name="testquery"><br>
+    <input type="submit" value="Submit">
+</form>
+<table border=1 class="table-bordered">
+    {% for user in data %}
+    <tr>
+        <td>{{user[0]}}</td>
+        <td>{{user[1]}}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% endblock %}
